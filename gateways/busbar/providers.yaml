@@ -1,0 +1,6 @@
+# Busbar provider catalog (BUSBAR_PROVIDERS): one Anthropic-protocol provider whose upstream is the
+# AIGatewayBench deterministic mock on 127.0.0.1:9000 (POST /v1/messages).
+mock:
+  protocol: anthropic
+  base_url: http://127.0.0.1:9000
+  error_map: {}

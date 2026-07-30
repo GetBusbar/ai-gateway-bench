@@ -1,0 +1,23 @@
+# Busbar deployment config (BUSBAR_CONFIG) for AIGatewayBench: an Anthropic Messages passthrough to
+# the local mock. Governance is always-on in busbar 1.5.0, so we use the default in-memory store +
+# one minted virtual key (a single hashmap lookup on the hot path). No TLS, no hooks — pure proxy
+# overhead.
+listen: "127.0.0.1:8105"
+admin_listen: "127.0.0.1:8106"
+observability:
+  emit_server_timing: true
+auth:
+  admin_auth:
+    - admin-tokens: { token: { env: BUSBAR_ADMIN_TOKEN } }
+providers:
+  mock:
+    api_key: { env: BENCH_MOCK_KEY }
+models:
+  bench-model:
+    provider: mock
+    max_concurrent: 256
+    max_requests: -1
+pools:
+  bench-pool:
+    members:
+      - model: bench-model
