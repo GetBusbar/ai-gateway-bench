@@ -4,11 +4,13 @@
 # overhead.
 listen: "127.0.0.1:8105"
 admin_listen: "127.0.0.1:8106"
-observability:
-  emit_server_timing: true
+advanced:
+  response_headers:
+    server_timing: true
+identity-providers:
+  admin-tokens: { module: admin-tokens, token: { env: BUSBAR_ADMIN_TOKEN } }
 auth:
-  admin_auth:
-    - admin-tokens: { token: { env: BUSBAR_ADMIN_TOKEN } }
+  admin_auth: [admin-tokens]
 providers:
   mock:
     api_key: { env: BENCH_MOCK_KEY }
