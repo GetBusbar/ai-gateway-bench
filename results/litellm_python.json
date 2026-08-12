@@ -1,20 +1,11 @@
 {
-  "chunk_fidelity": null,
-  "concurrency": 16,
+  "concurrency": 1,
   "count": 5000,
-  "endpoint": "http://127.0.0.1:8102/v1/messages",
+  "elapsed_s": 132.581538416,
   "errors": [],
-  "inter_chunk_ms": {
-    "p50": null,
-    "p99": null
-  },
-  "label": "python-anthropic-c16",
-  "latency_p50_ms": 100.555,
-  "latency_p99_ms": 288.439,
-  "peak_rss_mb": 329.454,
-  "streaming": false,
-  "ttft_ms": {
-    "p50": null,
-    "p99": null
-  }
+  "label": "litellm_python",
+  "latency_p50_ms": 26.405125,
+  "latency_p99_ms": 30.125458000000002,
+  "rps": 37.71264129030953,
+  "url": "http://127.0.0.1:8102/v1/messages"
 }

@@ -1,21 +1,11 @@
 {
-  "chunk_fidelity": null,
-  "concurrency": 16,
+  "concurrency": 1,
   "count": 5000,
-  "endpoint": "http://127.0.0.1:8103/anthropic/v1/messages",
+  "elapsed_s": 112.628408916,
   "errors": [],
-  "inter_chunk_ms": {
-    "p50": null,
-    "p99": null
-  },
-  "label": "bifrost-anthropic-c16",
-  "latency_p50_ms": 22.858,
-  "latency_p99_ms": 35.249,
-  "peak_rss_mb": 213.877,
-  "streaming": false,
-  "ttft_ms": {
-    "p50": null,
-    "p99": null
-  },
-  "endpoint_note": "Bifrost v1.6.4 native Anthropic integration is /anthropic/v1/messages; root /v1/messages returned 405."
+  "label": "bifrost",
+  "latency_p50_ms": 22.559083,
+  "latency_p99_ms": 23.443834,
+  "rps": 44.393772833362824,
+  "url": "http://127.0.0.1:8103/anthropic/v1/messages"
 }

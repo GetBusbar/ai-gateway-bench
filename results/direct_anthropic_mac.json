@@ -1,0 +1,11 @@
+{
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 110.626886625,
+  "errors": [],
+  "label": "direct",
+  "latency_p50_ms": 22.223791,
+  "latency_p99_ms": 22.82575,
+  "rps": 45.19696931315498,
+  "url": "http://127.0.0.1:9000/v1/messages"
+}

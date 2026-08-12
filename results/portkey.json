@@ -1,50 +1,11 @@
 {
-  "chunk_fidelity": 0.0,
-  "count": 30,
-  "endpoint": "http://127.0.0.1:8787/v1/chat/completions",
-  "errors": [
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500",
-    "HTTP 500"
-  ],
-  "inter_chunk_ms": {
-    "p50": null,
-    "p99": null
-  },
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 120.833523667,
+  "errors": [],
   "label": "portkey",
-  "latency_p50_ms": 2.754,
-  "latency_p99_ms": 8.253,
-  "peak_rss_mb": 106.873,
-  "streaming": true,
-  "ttft_ms": {
-    "p50": null,
-    "p99": null
-  }
+  "latency_p50_ms": 24.139457999999998,
+  "latency_p99_ms": 25.612209,
+  "rps": 41.37924516526795,
+  "url": "http://127.0.0.1:8787/v1/messages"
 }

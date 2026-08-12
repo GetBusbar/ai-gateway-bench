@@ -1,0 +1,11 @@
+{
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 112.264147208,
+  "errors": [],
+  "label": "busbar",
+  "latency_p50_ms": 22.495042,
+  "latency_p99_ms": 23.300083,
+  "rps": 44.537816607969546,
+  "url": "http://127.0.0.1:8105/bench-pool/v1/messages"
+}
