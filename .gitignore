@@ -1,5 +1,12 @@
 /target
 results/*.jsonl
 .venv/
+venv/
 __pycache__/
 */__pycache__/
+
+# Gateway RUNTIME state, written by the gateway under test while a bench runs.
+# It is a snapshot of a throwaway local instance (breaker counters, audit chain,
+# config versions), not configuration — committing it would make a bench replay
+# start from another run's state.
+gateways/*/busbar-state.json

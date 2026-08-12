@@ -16,7 +16,11 @@ def write(name: str, rows: list[dict[str, object]]) -> None:
 
 
 def session() -> None:
-    data = json.loads((RESULTS / "session_overhead.json").read_text())
+    path = RESULTS / "session_overhead.json"
+    if not path.exists():
+        print("skip session csv: session_overhead.json not found")
+        return
+    data = json.loads(path.read_text())
     write(
         "session_overhead.csv",
         [
@@ -39,9 +43,15 @@ def concurrency() -> None:
     }
     data = []
     for concurrency in (1, 4, 8, 16):
-        baseline = json.loads((RESULTS / f"direct_messages_c{concurrency}.json").read_text())
+        base_path = RESULTS / f"direct_messages_c{concurrency}.json"
+        if not base_path.exists():
+            continue
+        baseline = json.loads(base_path.read_text())
         for gateway, prefix in prefixes.items():
-            result = json.loads((RESULTS / f"{prefix}_c{concurrency}.json").read_text())
+            result_path = RESULTS / f"{prefix}_c{concurrency}.json"
+            if not result_path.exists():
+                continue
+            result = json.loads(result_path.read_text())
             data.append(
                 {
                     "gateway": gateway,
@@ -51,6 +61,9 @@ def concurrency() -> None:
                     "baseline_p99_ms": baseline["latency_p99_ms"],
                 }
             )
+    if not data:
+        print("skip concurrency csv: no concurrency-sweep result files present")
+        return
     (RESULTS / "concurrency_sweep.json").write_text(json.dumps(data, indent=2) + "\n")
     write(
         "latency_vs_concurrency.csv",
@@ -66,7 +79,11 @@ def concurrency() -> None:
 
 
 def ttft() -> None:
-    data = json.loads((RESULTS / "ttft_overhead.json").read_text())
+    path = RESULTS / "ttft_overhead.json"
+    if not path.exists():
+        print("skip ttft csv: ttft_overhead.json not found")
+        return
+    data = json.loads(path.read_text())
     write(
         "ttft_overhead.csv",
         [
@@ -82,7 +99,11 @@ def ttft() -> None:
 
 
 def cost() -> None:
-    data = json.loads((RESULTS / "cost_per_million.json").read_text())
+    path = RESULTS / "cost_per_million.json"
+    if not path.exists():
+        print("skip cost csv: cost_per_million.json not found")
+        return
+    data = json.loads(path.read_text())
     write(
         "cost_per_million.csv",
         [
@@ -97,19 +118,28 @@ def cost() -> None:
 
 def overhead() -> None:
     data = json.loads((RESULTS / "overhead_summary.json").read_text())
+    # UNDER-LOAD peak RSS for EVERY gateway — litellm-rust uses its _messages (under-load)
+    # sample, NOT the idle _release single-sample the upstream chart used. No idle substitution.
     rss_files = {
-        "litellm-rust": "mem_litellm_rust_release.txt",
+        "busbar": "mem_busbar_messages.txt",
+        "litellm-rust": "mem_litellm_rust_messages.txt",
         "litellm-python": "mem_litellm_python_messages.txt",
         "bifrost": "mem_bifrost_messages.txt",
         "portkey": "mem_portkey_messages.txt",
     }
     rows = []
     for row in data:
+        rss_path = RESULTS / rss_files[row["gateway"]]
+        if not rss_path.exists():
+            continue
         peak = next(
-            float(line.split("=", 1)[1])
-            for line in (RESULTS / rss_files[row["gateway"]]).read_text().splitlines()
-            if line.startswith("peak_rss_mb=")
+            (float(line.split("=", 1)[1])
+             for line in rss_path.read_text().splitlines()
+             if line.startswith("peak_rss_mb=")),
+            None,
         )
+        if peak is None:
+            continue
         rows.append(
             {
                 "gateway": row["gateway"],
@@ -121,8 +151,11 @@ def overhead() -> None:
 
 
 if __name__ == "__main__":
-    session()
-    concurrency()
-    ttft()
-    cost()
-    overhead()
+    # Each builder is independent: a missing/legacy input for one chart must not
+    # abort the others (e.g. a stale ttft_overhead.json format should not block the
+    # headline overhead_comparison.csv from regenerating with busbar).
+    for step in (session, concurrency, ttft, cost, overhead):
+        try:
+            step()
+        except Exception as exc:  # noqa: BLE001
+            print(f"skip {step.__name__}: {type(exc).__name__}: {exc}")

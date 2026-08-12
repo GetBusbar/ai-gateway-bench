@@ -22,11 +22,12 @@ import matplotlib.pyplot as plt
 RESULTS = Path(__file__).resolve().parent.parent / "results"
 OUT = Path(__file__).resolve().parent / "overhead_comparison.png"
 
-LITELLM_COLOR = "#00b34a"
+WINNER_COLOR = "#00b34a"
 OTHER_COLOR = "#3a3f4b"
 
-# gateway key in overhead_summary.json -> (display label, memory summary file)
+# gateway key in overhead_comparison.csv -> display label. Busbar added by GetBusbar (this fork).
 GATEWAYS = {
+    "busbar": "Busbar",
     "litellm-rust": "LiteLLM (Rust)",
     "bifrost": "Bifrost",
     "portkey": "Portkey",
@@ -39,7 +40,6 @@ class Row:
     label: str
     added_p99_ms: float
     peak_rss_mb: float
-    is_litellm: bool
 
 
 def _load() -> list[Row]:
@@ -47,12 +47,14 @@ def _load() -> list[Row]:
         overhead = {item["gateway"]: item for item in csv.DictReader(file)}
     rows = []
     for key, label in GATEWAYS.items():
+        # Only chart gateways that actually have measured data this run.
+        if key not in overhead:
+            continue
         rows.append(
             Row(
                 label=label,
                 added_p99_ms=float(overhead[key]["p99_added_latency_ms"]),
                 peak_rss_mb=float(overhead[key]["peak_rss_mb"]),
-                is_litellm=(key == "litellm-rust"),
             )
         )
     return rows
@@ -62,7 +64,10 @@ def _panel(ax, rows: list[Row], values, unit: str, title: str, log: bool = False
     order = sorted(range(len(rows)), key=lambda i: values[i], reverse=True)
     labels = [rows[i].label for i in order]
     vals = [values[i] for i in order]
-    colors = [LITELLM_COLOR if rows[i].is_litellm else OTHER_COLOR for i in order]
+    # Rank-based coloring: green goes to whichever gateway MEASURED best (lowest) on THIS
+    # metric — it is green because it won the measurement, not because of its name.
+    best = min(vals)
+    colors = [WINNER_COLOR if v == best else OTHER_COLOR for v in vals]
     floor = min(vals) / 3.0 if log else 0.0
     bars = ax.barh(range(len(rows)), vals, left=floor if log else 0, color=colors, height=0.62)
     ax.set_yticks(range(len(rows)))
