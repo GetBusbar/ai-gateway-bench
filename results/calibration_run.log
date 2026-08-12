@@ -1,0 +1,1118 @@
+[19:06:14] launching m7g.xlarge (ami-02c4144237becae44)
+[19:06:16] launched i-0952e3536a6bdb6a4 — waiting for running
+[19:06:33] ip=54.198.153.232 — waiting for ssh
+[19:06:35] installing base build deps on box
+  [setup] Warning: Permanently added '54.198.153.232' (ED25519) to the list of known hosts.
+  [setup] Hit:1 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble InRelease
+  [setup] Get:2 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
+  [setup] Get:3 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports InRelease [126 kB]
+  [setup] Get:4 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease [126 kB]
+  [setup] Get:5 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/universe arm64 Packages [15.3 MB]
+  [setup] Get:6 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/universe Translation-en [5982 kB]
+  [setup] Get:7 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/universe arm64 Components [3573 kB]
+  [setup] Get:8 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Packages [893 kB]
+  [setup] Get:9 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/universe arm64 c-n-f Metadata [295 kB]
+  [setup] Get:10 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/multiverse arm64 Packages [223 kB]
+  [setup] Get:11 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/multiverse Translation-en [118 kB]
+  [setup] Get:12 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/multiverse arm64 Components [31.6 kB]
+  [setup] Get:13 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/multiverse arm64 c-n-f Metadata [7152 B]
+  [setup] Get:14 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Packages [1156 kB]
+  [setup] Get:15 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main Translation-en [273 kB]
+  [setup] Get:16 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Components [178 kB]
+  [setup] Get:17 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Packages [1667 kB]
+  [setup] Get:18 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe Translation-en [328 kB]
+  [setup] Get:19 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Components [387 kB]
+  [setup] Get:20 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 c-n-f Metadata [33.5 kB]
+  [setup] Get:21 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/restricted arm64 Packages [1904 kB]
+  [setup] Get:22 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/restricted Translation-en [290 kB]
+  [setup] Get:23 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/multiverse arm64 Packages [66.0 kB]
+  [setup] Get:24 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/multiverse Translation-en [11.8 kB]
+  [setup] Get:25 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/multiverse arm64 Components [212 B]
+  [setup] Get:26 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/multiverse arm64 c-n-f Metadata [472 B]
+  [setup] Get:27 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/main arm64 Packages [40.6 kB]
+  [setup] Get:28 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/main Translation-en [9172 B]
+  [setup] Get:29 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/main arm64 Components [3584 B]
+  [setup] Get:30 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/main arm64 c-n-f Metadata [372 B]
+  [setup] Get:31 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/universe arm64 Packages [31.2 kB]
+  [setup] Get:32 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/universe Translation-en [18.6 kB]
+  [setup] Get:33 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/universe arm64 Components [10.5 kB]
+  [setup] Get:34 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/universe arm64 c-n-f Metadata [1592 B]
+  [setup] Get:35 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/restricted arm64 Components [212 B]
+  [setup] Get:36 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/restricted arm64 c-n-f Metadata [116 B]
+  [setup] Get:37 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/multiverse arm64 Packages [748 B]
+  [setup] Get:38 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/multiverse Translation-en [340 B]
+  [setup] Get:39 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/multiverse arm64 Components [212 B]
+  [setup] Get:40 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-backports/multiverse arm64 c-n-f Metadata [116 B]
+  [setup] Get:41 http://ports.ubuntu.com/ubuntu-ports noble-security/main Translation-en [192 kB]
+  [setup] Get:42 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Components [43.3 kB]
+  [setup] Get:43 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 c-n-f Metadata [11.6 kB]
+  [setup] Get:44 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Packages [1218 kB]
+  [setup] Get:45 http://ports.ubuntu.com/ubuntu-ports noble-security/universe Translation-en [233 kB]
+  [setup] Get:46 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Components [76.2 kB]
+  [setup] Get:47 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 c-n-f Metadata [23.7 kB]
+  [setup] Get:48 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Packages [1769 kB]
+  [setup] Get:49 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted Translation-en [268 kB]
+  [setup] Get:50 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Components [212 B]
+  [setup] Get:51 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 c-n-f Metadata [388 B]
+  [setup] Get:52 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 Packages [62.1 kB]
+  [setup] Get:53 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse Translation-en [10.1 kB]
+  [setup] Get:54 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 Components [208 B]
+  [setup] Get:55 http://ports.ubuntu.com/ubuntu-ports noble-security/multiverse arm64 c-n-f Metadata [456 B]
+  [setup] Fetched 37.1 MB in 4s (8854 kB/s)
+  [setup] Reading package lists...
+  [setup] Reading package lists...
+  [setup] Building dependency tree...
+  [setup] Reading state information...
+  [setup] git is already the newest version (1:2.43.0-1ubuntu7.3).
+  [setup] git set to manually installed.
+  [setup] The following additional packages will be installed:
+  [setup]   binutils binutils-aarch64-linux-gnu binutils-common bzip2 cpp cpp-13
+  [setup]   cpp-13-aarch64-linux-gnu cpp-aarch64-linux-gnu dpkg-dev fakeroot
+  [setup]   fontconfig-config fonts-dejavu-core fonts-dejavu-mono g++ g++-13
+  [setup]   g++-13-aarch64-linux-gnu g++-aarch64-linux-gnu gcc gcc-13
+  [setup]   gcc-13-aarch64-linux-gnu gcc-13-base gcc-aarch64-linux-gnu javascript-common
+  [setup]   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  [setup]   libaom3 libasan8 libatomic1 libbinutils libc-dev-bin libc-devtools libc6-dev
+  [setup]   libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl
+  [setup]   libexpat1-dev libfakeroot libfile-fcntllock-perl libfontconfig1
+  [setup]   libgcc-13-dev libgd3 libgomp1 libgprofng0 libheif-plugin-aomdec
+  [setup]   libheif-plugin-aomenc libheif1 libhwasan0 libisl23 libitm1 libjbig0
+  [setup]   libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore
+  [setup]   liblerc4 liblsan0 libmpc3 libpkgconf3 libpython3-dev libpython3.12-dev
+  [setup]   libsframe1 libsharpyuv0 libstdc++-13-dev libtiff6 libtsan2 libubsan1
+  [setup]   libwebp7 libxpm4 linux-libc-dev linux-tools-common lto-disabled-list make
+  [setup]   manpages-dev pkgconf pkgconf-bin python3-dev python3-pip-whl
+  [setup]   python3-setuptools-whl python3-wheel python3.12-dev python3.12-venv
+  [setup]   rpcsvc-proto zlib1g-dev
+  [setup] Suggested packages:
+  [setup]   binutils-doc gprofng-gui bzip2-doc cpp-doc gcc-13-locales cpp-13-doc
+  [setup]   debian-keyring gcc-13-doc gcc-multilib autoconf automake libtool flex bison
+  [setup]   gdb gcc-doc gdb-aarch64-linux-gnu apache2 | lighttpd | httpd glibc-doc bzr
+  [setup]   libgd-tools libheif-plugin-libde265 libheif-plugin-x265
+  [setup]   libheif-plugin-ffmpegdec libheif-plugin-jpegdec libheif-plugin-jpegenc
+  [setup]   libheif-plugin-j2kdec libheif-plugin-j2kenc libheif-plugin-rav1e
+  [setup]   libheif-plugin-svtenc libssl-doc libstdc++-13-doc make-doc
+  [setup] The following NEW packages will be installed:
+  [setup]   binutils binutils-aarch64-linux-gnu binutils-common build-essential bzip2
+  [setup]   cpp cpp-13 cpp-13-aarch64-linux-gnu cpp-aarch64-linux-gnu dpkg-dev fakeroot
+  [setup]   fontconfig-config fonts-dejavu-core fonts-dejavu-mono g++ g++-13
+  [setup]   g++-13-aarch64-linux-gnu g++-aarch64-linux-gnu gcc gcc-13
+  [setup]   gcc-13-aarch64-linux-gnu gcc-13-base gcc-aarch64-linux-gnu javascript-common
+  [setup]   libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  [setup]   libaom3 libasan8 libatomic1 libbinutils libc-dev-bin libc-devtools libc6-dev
+  [setup]   libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libdpkg-perl
+  [setup]   libexpat1-dev libfakeroot libfile-fcntllock-perl libfontconfig1
+  [setup]   libgcc-13-dev libgd3 libgomp1 libgprofng0 libheif-plugin-aomdec
+  [setup]   libheif-plugin-aomenc libheif1 libhwasan0 libisl23 libitm1 libjbig0
+  [setup]   libjpeg-turbo8 libjpeg8 libjs-jquery libjs-sphinxdoc libjs-underscore
+  [setup]   liblerc4 liblsan0 libmpc3 libpkgconf3 libpython3-dev libpython3.12-dev
+  [setup]   libsframe1 libsharpyuv0 libssl-dev libstdc++-13-dev libtiff6 libtsan2
+  [setup]   libubsan1 libwebp7 libxpm4 linux-libc-dev lto-disabled-list make
+  [setup]   manpages-dev pkg-config pkgconf pkgconf-bin python3-dev python3-pip
+  [setup]   python3-pip-whl python3-setuptools-whl python3-venv python3-wheel
+  [setup]   python3.12-dev python3.12-venv rpcsvc-proto zlib1g-dev
+  [setup] The following packages will be upgraded:
+  [setup]   linux-tools-common
+  [setup] 1 upgraded, 92 newly installed, 0 to remove and 15 not upgraded.
+  [setup] Need to get 86.4 MB of archives.
+  [setup] After this operation, 308 MB of additional disk space will be used.
+  [setup] Get:1 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 binutils-common arm64 2.42-4ubuntu2.10 [240 kB]
+  [setup] Get:2 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libsframe1 arm64 2.42-4ubuntu2.10 [15.4 kB]
+  [setup] Get:3 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libbinutils arm64 2.42-4ubuntu2.10 [766 kB]
+  [setup] Get:4 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libctf-nobfd0 arm64 2.42-4ubuntu2.10 [101 kB]
+  [setup] Get:5 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libctf0 arm64 2.42-4ubuntu2.10 [95.7 kB]
+  [setup] Get:6 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libgprofng0 arm64 2.42-4ubuntu2.10 [776 kB]
+  [setup] Get:7 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 binutils-aarch64-linux-gnu arm64 2.42-4ubuntu2.10 [3304 kB]
+  [setup] Get:8 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 binutils arm64 2.42-4ubuntu2.10 [18.1 kB]
+  [setup] Get:9 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libc-dev-bin arm64 2.39-0ubuntu8.7 [19.7 kB]
+  [setup] Get:10 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 linux-libc-dev arm64 6.8.0-136.136 [1550 kB]
+  [setup] Get:11 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libcrypt-dev arm64 1:4.4.36-4build1 [118 kB]
+  [setup] Get:12 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 rpcsvc-proto arm64 1.4.2-0ubuntu7 [64.8 kB]
+  [setup] Get:13 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libc6-dev arm64 2.39-0ubuntu8.7 [1596 kB]
+  [setup] Get:14 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 gcc-13-base arm64 13.3.0-6ubuntu2~24.04.1 [51.6 kB]
+  [setup] Get:15 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libisl23 arm64 0.26-3build1.1 [669 kB]
+  [setup] Get:16 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libmpc3 arm64 1.3.1-1build1.1 [56.4 kB]
+  [setup] Get:17 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 cpp-13-aarch64-linux-gnu arm64 13.3.0-6ubuntu2~24.04.1 [9560 kB]
+  [setup] Get:18 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 cpp-13 arm64 13.3.0-6ubuntu2~24.04.1 [1038 B]
+  [setup] Get:19 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 cpp-aarch64-linux-gnu arm64 4:13.2.0-7ubuntu1 [5316 B]
+  [setup] Get:20 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 cpp arm64 4:13.2.0-7ubuntu1 [22.4 kB]
+  [setup] Get:21 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libcc1-0 arm64 14.2.0-4ubuntu2~24.04.1 [49.7 kB]
+  [setup] Get:22 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libgomp1 arm64 14.2.0-4ubuntu2~24.04.1 [145 kB]
+  [setup] Get:23 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libitm1 arm64 14.2.0-4ubuntu2~24.04.1 [28.2 kB]
+  [setup] Get:24 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libatomic1 arm64 14.2.0-4ubuntu2~24.04.1 [11.6 kB]
+  [setup] Get:25 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libasan8 arm64 14.2.0-4ubuntu2~24.04.1 [2928 kB]
+  [setup] Get:26 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 liblsan0 arm64 14.2.0-4ubuntu2~24.04.1 [1289 kB]
+  [setup] Get:27 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libtsan2 arm64 14.2.0-4ubuntu2~24.04.1 [2697 kB]
+  [setup] Get:28 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libubsan1 arm64 14.2.0-4ubuntu2~24.04.1 [1157 kB]
+  [setup] Get:29 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libhwasan0 arm64 14.2.0-4ubuntu2~24.04.1 [1605 kB]
+  [setup] Get:30 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libgcc-13-dev arm64 13.3.0-6ubuntu2~24.04.1 [2473 kB]
+  [setup] Get:31 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 gcc-13-aarch64-linux-gnu arm64 13.3.0-6ubuntu2~24.04.1 [18.7 MB]
+  [setup] Get:32 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 gcc-13 arm64 13.3.0-6ubuntu2~24.04.1 [484 kB]
+  [setup] Get:33 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 gcc-aarch64-linux-gnu arm64 4:13.2.0-7ubuntu1 [1198 B]
+  [setup] Get:34 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 gcc arm64 4:13.2.0-7ubuntu1 [5018 B]
+  [setup] Get:35 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libstdc++-13-dev arm64 13.3.0-6ubuntu2~24.04.1 [2397 kB]
+  [setup] Get:36 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 g++-13-aarch64-linux-gnu arm64 13.3.0-6ubuntu2~24.04.1 [10.9 MB]
+  [setup] Get:37 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 g++-13 arm64 13.3.0-6ubuntu2~24.04.1 [16.0 kB]
+  [setup] Get:38 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 g++-aarch64-linux-gnu arm64 4:13.2.0-7ubuntu1 [962 B]
+  [setup] Get:39 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 g++ arm64 4:13.2.0-7ubuntu1 [1082 B]
+  [setup] Get:40 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 make arm64 4.3-4.1build2 [178 kB]
+  [setup] Get:41 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libdpkg-perl all 1.22.6ubuntu6.6 [268 kB]
+  [setup] Get:42 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 bzip2 arm64 1.0.8-5.1build0.1 [34.0 kB]
+  [setup] Get:43 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 lto-disabled-list all 47 [12.4 kB]
+  [setup] Get:44 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 dpkg-dev all 1.22.6ubuntu6.6 [1074 kB]
+  [setup] Get:45 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 build-essential arm64 12.10ubuntu1 [4932 B]
+  [setup] Get:46 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libfakeroot arm64 1.33-1 [32.5 kB]
+  [setup] Get:47 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 fakeroot arm64 1.33-1 [66.9 kB]
+  [setup] Get:48 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 fonts-dejavu-mono all 2.37-8 [502 kB]
+  [setup] Get:49 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 fonts-dejavu-core all 2.37-8 [835 kB]
+  [setup] Get:50 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 fontconfig-config arm64 2.15.0-1.1ubuntu2 [37.4 kB]
+  [setup] Get:51 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 javascript-common all 11+nmu1 [5936 B]
+  [setup] Get:52 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
+  [setup] Get:53 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libalgorithm-diff-xs-perl arm64 0.04-8build3 [10.9 kB]
+  [setup] Get:54 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libalgorithm-merge-perl all 0.08-5 [11.4 kB]
+  [setup] Get:55 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libaom3 arm64 3.8.2-2ubuntu0.1 [1617 kB]
+  [setup] Get:56 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libfontconfig1 arm64 2.15.0-1.1ubuntu2 [142 kB]
+  [setup] Get:57 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libsharpyuv0 arm64 1.3.2-0.4build3 [14.5 kB]
+  [setup] Get:58 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libheif-plugin-aomdec arm64 1.17.6-1ubuntu4.6 [11.1 kB]
+  [setup] Get:59 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libheif1 arm64 1.17.6-1ubuntu4.6 [260 kB]
+  [setup] Get:60 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libjpeg-turbo8 arm64 2.1.5-2ubuntu2 [163 kB]
+  [setup] Get:61 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libjpeg8 arm64 8c-2ubuntu11 [2148 B]
+  [setup] Get:62 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libdeflate0 arm64 1.19-1build1.1 [43.5 kB]
+  [setup] Get:63 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libjbig0 arm64 2.1-6.1ubuntu2 [29.3 kB]
+  [setup] Get:64 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 liblerc4 arm64 4.0.0+ds-4ubuntu2 [154 kB]
+  [setup] Get:65 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libwebp7 arm64 1.3.2-0.4build3 [191 kB]
+  [setup] Get:66 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libtiff6 arm64 4.5.1+git230720-4ubuntu2.5 [192 kB]
+  [setup] Get:67 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libxpm4 arm64 1:3.5.17-1build2 [35.1 kB]
+  [setup] Get:68 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libgd3 arm64 2.3.3-9ubuntu5 [122 kB]
+  [setup] Get:69 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libc-devtools arm64 2.39-0ubuntu8.7 [27.8 kB]
+  [setup] Get:70 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libexpat1-dev arm64 2.6.1-2ubuntu0.4 [128 kB]
+  [setup] Get:71 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libfile-fcntllock-perl arm64 0.22-4ubuntu5 [30.6 kB]
+  [setup] Get:72 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libheif-plugin-aomenc arm64 1.17.6-1ubuntu4.6 [13.7 kB]
+  [setup] Get:73 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1 [328 kB]
+  [setup] Get:74 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libjs-underscore all 1.13.4~dfsg+~1.11.4-3 [118 kB]
+  [setup] Get:75 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libjs-sphinxdoc all 7.2.6-6 [149 kB]
+  [setup] Get:76 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 libpkgconf3 arm64 1.8.1-2build1 [31.2 kB]
+  [setup] Get:77 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 zlib1g-dev arm64 1:1.3.dfsg-3.1ubuntu2.1 [894 kB]
+  [setup] Get:78 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libpython3.12-dev arm64 3.12.3-1ubuntu0.15 [5538 kB]
+  [setup] Get:79 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libpython3-dev arm64 3.12.3-0ubuntu2.1 [10.4 kB]
+  [setup] Get:80 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libssl-dev arm64 3.0.13-0ubuntu3.11 [2338 kB]
+  [setup] Get:81 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 linux-tools-common all 6.8.0-136.136 [416 kB]
+  [setup] Get:82 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 manpages-dev all 6.7-2 [2013 kB]
+  [setup] Get:83 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 pkgconf-bin arm64 1.8.1-2build1 [20.5 kB]
+  [setup] Get:84 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 pkgconf arm64 1.8.1-2build1 [16.8 kB]
+  [setup] Get:85 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/main arm64 pkg-config arm64 1.8.1-2build1 [7264 B]
+  [setup] Get:86 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 python3.12-dev arm64 3.12.3-1ubuntu0.15 [498 kB]
+  [setup] Get:87 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 python3-dev arm64 3.12.3-0ubuntu2.1 [26.7 kB]
+  [setup] Get:88 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble/universe arm64 python3-wheel all 0.42.0-2 [53.1 kB]
+  [setup] Get:89 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 python3-pip all 24.0+dfsg-1ubuntu1.3 [1320 kB]
+  [setup] Get:90 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 python3-pip-whl all 24.0+dfsg-1ubuntu1.3 [1707 kB]
+  [setup] Get:91 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 python3-setuptools-whl all 68.1.2-2ubuntu1.2 [716 kB]
+  [setup] Get:92 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 python3.12-venv arm64 3.12.3-1ubuntu0.15 [5674 B]
+  [setup] Get:93 http://us-east-1.ec2.ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 python3-venv arm64 3.12.3-0ubuntu2.1 [1032 B]
+  [setup] debconf: unable to initialize frontend: Dialog
+  [setup] debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+  [setup] debconf: falling back to frontend: Readline
+  [setup] debconf: unable to initialize frontend: Readline
+  [setup] debconf: (This frontend requires a controlling tty.)
+  [setup] debconf: falling back to frontend: Teletype
+  [setup] dpkg-preconfigure: unable to re-open stdin: 
+  [setup] Fetched 86.4 MB in 1s (128 MB/s)
+  [setup] Selecting previously unselected package binutils-common:arm64.
+  [setup] (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 74109 files and directories currently installed.)
+  [setup] Preparing to unpack .../00-binutils-common_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking binutils-common:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package libsframe1:arm64.
+  [setup] Preparing to unpack .../01-libsframe1_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking libsframe1:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package libbinutils:arm64.
+  [setup] Preparing to unpack .../02-libbinutils_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking libbinutils:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package libctf-nobfd0:arm64.
+  [setup] Preparing to unpack .../03-libctf-nobfd0_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking libctf-nobfd0:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package libctf0:arm64.
+  [setup] Preparing to unpack .../04-libctf0_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking libctf0:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package libgprofng0:arm64.
+  [setup] Preparing to unpack .../05-libgprofng0_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking libgprofng0:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package binutils-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../06-binutils-aarch64-linux-gnu_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking binutils-aarch64-linux-gnu (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package binutils.
+  [setup] Preparing to unpack .../07-binutils_2.42-4ubuntu2.10_arm64.deb ...
+  [setup] Unpacking binutils (2.42-4ubuntu2.10) ...
+  [setup] Selecting previously unselected package libc-dev-bin.
+  [setup] Preparing to unpack .../08-libc-dev-bin_2.39-0ubuntu8.7_arm64.deb ...
+  [setup] Unpacking libc-dev-bin (2.39-0ubuntu8.7) ...
+  [setup] Selecting previously unselected package linux-libc-dev:arm64.
+  [setup] Preparing to unpack .../09-linux-libc-dev_6.8.0-136.136_arm64.deb ...
+  [setup] Unpacking linux-libc-dev:arm64 (6.8.0-136.136) ...
+  [setup] Selecting previously unselected package libcrypt-dev:arm64.
+  [setup] Preparing to unpack .../10-libcrypt-dev_1%3a4.4.36-4build1_arm64.deb ...
+  [setup] Unpacking libcrypt-dev:arm64 (1:4.4.36-4build1) ...
+  [setup] Selecting previously unselected package rpcsvc-proto.
+  [setup] Preparing to unpack .../11-rpcsvc-proto_1.4.2-0ubuntu7_arm64.deb ...
+  [setup] Unpacking rpcsvc-proto (1.4.2-0ubuntu7) ...
+  [setup] Selecting previously unselected package libc6-dev:arm64.
+  [setup] Preparing to unpack .../12-libc6-dev_2.39-0ubuntu8.7_arm64.deb ...
+  [setup] Unpacking libc6-dev:arm64 (2.39-0ubuntu8.7) ...
+  [setup] Selecting previously unselected package gcc-13-base:arm64.
+  [setup] Preparing to unpack .../13-gcc-13-base_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking gcc-13-base:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libisl23:arm64.
+  [setup] Preparing to unpack .../14-libisl23_0.26-3build1.1_arm64.deb ...
+  [setup] Unpacking libisl23:arm64 (0.26-3build1.1) ...
+  [setup] Selecting previously unselected package libmpc3:arm64.
+  [setup] Preparing to unpack .../15-libmpc3_1.3.1-1build1.1_arm64.deb ...
+  [setup] Unpacking libmpc3:arm64 (1.3.1-1build1.1) ...
+  [setup] Selecting previously unselected package cpp-13-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../16-cpp-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking cpp-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package cpp-13.
+  [setup] Preparing to unpack .../17-cpp-13_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package cpp-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../18-cpp-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_arm64.deb ...
+  [setup] Unpacking cpp-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+  [setup] Selecting previously unselected package cpp.
+  [setup] Preparing to unpack .../19-cpp_4%3a13.2.0-7ubuntu1_arm64.deb ...
+  [setup] Unpacking cpp (4:13.2.0-7ubuntu1) ...
+  [setup] Selecting previously unselected package libcc1-0:arm64.
+  [setup] Preparing to unpack .../20-libcc1-0_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libcc1-0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libgomp1:arm64.
+  [setup] Preparing to unpack .../21-libgomp1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libgomp1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libitm1:arm64.
+  [setup] Preparing to unpack .../22-libitm1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libitm1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libatomic1:arm64.
+  [setup] Preparing to unpack .../23-libatomic1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libatomic1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libasan8:arm64.
+  [setup] Preparing to unpack .../24-libasan8_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libasan8:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package liblsan0:arm64.
+  [setup] Preparing to unpack .../25-liblsan0_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking liblsan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libtsan2:arm64.
+  [setup] Preparing to unpack .../26-libtsan2_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libtsan2:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libubsan1:arm64.
+  [setup] Preparing to unpack .../27-libubsan1_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libubsan1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libhwasan0:arm64.
+  [setup] Preparing to unpack .../28-libhwasan0_14.2.0-4ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libhwasan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package libgcc-13-dev:arm64.
+  [setup] Preparing to unpack .../29-libgcc-13-dev_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libgcc-13-dev:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package gcc-13-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../30-gcc-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking gcc-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package gcc-13.
+  [setup] Preparing to unpack .../31-gcc-13_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package gcc-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../32-gcc-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_arm64.deb ...
+  [setup] Unpacking gcc-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+  [setup] Selecting previously unselected package gcc.
+  [setup] Preparing to unpack .../33-gcc_4%3a13.2.0-7ubuntu1_arm64.deb ...
+  [setup] Unpacking gcc (4:13.2.0-7ubuntu1) ...
+  [setup] Selecting previously unselected package libstdc++-13-dev:arm64.
+  [setup] Preparing to unpack .../34-libstdc++-13-dev_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking libstdc++-13-dev:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package g++-13-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../35-g++-13-aarch64-linux-gnu_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking g++-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package g++-13.
+  [setup] Preparing to unpack .../36-g++-13_13.3.0-6ubuntu2~24.04.1_arm64.deb ...
+  [setup] Unpacking g++-13 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Selecting previously unselected package g++-aarch64-linux-gnu.
+  [setup] Preparing to unpack .../37-g++-aarch64-linux-gnu_4%3a13.2.0-7ubuntu1_arm64.deb ...
+  [setup] Unpacking g++-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+  [setup] Selecting previously unselected package g++.
+  [setup] Preparing to unpack .../38-g++_4%3a13.2.0-7ubuntu1_arm64.deb ...
+  [setup] Unpacking g++ (4:13.2.0-7ubuntu1) ...
+  [setup] Selecting previously unselected package make.
+  [setup] Preparing to unpack .../39-make_4.3-4.1build2_arm64.deb ...
+  [setup] Unpacking make (4.3-4.1build2) ...
+  [setup] Selecting previously unselected package libdpkg-perl.
+  [setup] Preparing to unpack .../40-libdpkg-perl_1.22.6ubuntu6.6_all.deb ...
+  [setup] Unpacking libdpkg-perl (1.22.6ubuntu6.6) ...
+  [setup] Selecting previously unselected package bzip2.
+  [setup] Preparing to unpack .../41-bzip2_1.0.8-5.1build0.1_arm64.deb ...
+  [setup] Unpacking bzip2 (1.0.8-5.1build0.1) ...
+  [setup] Selecting previously unselected package lto-disabled-list.
+  [setup] Preparing to unpack .../42-lto-disabled-list_47_all.deb ...
+  [setup] Unpacking lto-disabled-list (47) ...
+  [setup] Selecting previously unselected package dpkg-dev.
+  [setup] Preparing to unpack .../43-dpkg-dev_1.22.6ubuntu6.6_all.deb ...
+  [setup] Unpacking dpkg-dev (1.22.6ubuntu6.6) ...
+  [setup] Selecting previously unselected package build-essential.
+  [setup] Preparing to unpack .../44-build-essential_12.10ubuntu1_arm64.deb ...
+  [setup] Unpacking build-essential (12.10ubuntu1) ...
+  [setup] Selecting previously unselected package libfakeroot:arm64.
+  [setup] Preparing to unpack .../45-libfakeroot_1.33-1_arm64.deb ...
+  [setup] Unpacking libfakeroot:arm64 (1.33-1) ...
+  [setup] Selecting previously unselected package fakeroot.
+  [setup] Preparing to unpack .../46-fakeroot_1.33-1_arm64.deb ...
+  [setup] Unpacking fakeroot (1.33-1) ...
+  [setup] Selecting previously unselected package fonts-dejavu-mono.
+  [setup] Preparing to unpack .../47-fonts-dejavu-mono_2.37-8_all.deb ...
+  [setup] Unpacking fonts-dejavu-mono (2.37-8) ...
+  [setup] Selecting previously unselected package fonts-dejavu-core.
+  [setup] Preparing to unpack .../48-fonts-dejavu-core_2.37-8_all.deb ...
+  [setup] Unpacking fonts-dejavu-core (2.37-8) ...
+  [setup] Selecting previously unselected package fontconfig-config.
+  [setup] Preparing to unpack .../49-fontconfig-config_2.15.0-1.1ubuntu2_arm64.deb ...
+  [setup] Unpacking fontconfig-config (2.15.0-1.1ubuntu2) ...
+  [setup] Selecting previously unselected package javascript-common.
+  [setup] Preparing to unpack .../50-javascript-common_11+nmu1_all.deb ...
+  [setup] Unpacking javascript-common (11+nmu1) ...
+  [setup] Selecting previously unselected package libalgorithm-diff-perl.
+  [setup] Preparing to unpack .../51-libalgorithm-diff-perl_1.201-1_all.deb ...
+  [setup] Unpacking libalgorithm-diff-perl (1.201-1) ...
+  [setup] Selecting previously unselected package libalgorithm-diff-xs-perl:arm64.
+  [setup] Preparing to unpack .../52-libalgorithm-diff-xs-perl_0.04-8build3_arm64.deb ...
+  [setup] Unpacking libalgorithm-diff-xs-perl:arm64 (0.04-8build3) ...
+  [setup] Selecting previously unselected package libalgorithm-merge-perl.
+  [setup] Preparing to unpack .../53-libalgorithm-merge-perl_0.08-5_all.deb ...
+  [setup] Unpacking libalgorithm-merge-perl (0.08-5) ...
+  [setup] Selecting previously unselected package libaom3:arm64.
+  [setup] Preparing to unpack .../54-libaom3_3.8.2-2ubuntu0.1_arm64.deb ...
+  [setup] Unpacking libaom3:arm64 (3.8.2-2ubuntu0.1) ...
+  [setup] Selecting previously unselected package libfontconfig1:arm64.
+  [setup] Preparing to unpack .../55-libfontconfig1_2.15.0-1.1ubuntu2_arm64.deb ...
+  [setup] Unpacking libfontconfig1:arm64 (2.15.0-1.1ubuntu2) ...
+  [setup] Selecting previously unselected package libsharpyuv0:arm64.
+  [setup] Preparing to unpack .../56-libsharpyuv0_1.3.2-0.4build3_arm64.deb ...
+  [setup] Unpacking libsharpyuv0:arm64 (1.3.2-0.4build3) ...
+  [setup] Selecting previously unselected package libheif-plugin-aomdec:arm64.
+  [setup] Preparing to unpack .../57-libheif-plugin-aomdec_1.17.6-1ubuntu4.6_arm64.deb ...
+  [setup] Unpacking libheif-plugin-aomdec:arm64 (1.17.6-1ubuntu4.6) ...
+  [setup] Selecting previously unselected package libheif1:arm64.
+  [setup] Preparing to unpack .../58-libheif1_1.17.6-1ubuntu4.6_arm64.deb ...
+  [setup] Unpacking libheif1:arm64 (1.17.6-1ubuntu4.6) ...
+  [setup] Selecting previously unselected package libjpeg-turbo8:arm64.
+  [setup] Preparing to unpack .../59-libjpeg-turbo8_2.1.5-2ubuntu2_arm64.deb ...
+  [setup] Unpacking libjpeg-turbo8:arm64 (2.1.5-2ubuntu2) ...
+  [setup] Selecting previously unselected package libjpeg8:arm64.
+  [setup] Preparing to unpack .../60-libjpeg8_8c-2ubuntu11_arm64.deb ...
+  [setup] Unpacking libjpeg8:arm64 (8c-2ubuntu11) ...
+  [setup] Selecting previously unselected package libdeflate0:arm64.
+  [setup] Preparing to unpack .../61-libdeflate0_1.19-1build1.1_arm64.deb ...
+  [setup] Unpacking libdeflate0:arm64 (1.19-1build1.1) ...
+  [setup] Selecting previously unselected package libjbig0:arm64.
+  [setup] Preparing to unpack .../62-libjbig0_2.1-6.1ubuntu2_arm64.deb ...
+  [setup] Unpacking libjbig0:arm64 (2.1-6.1ubuntu2) ...
+  [setup] Selecting previously unselected package liblerc4:arm64.
+  [setup] Preparing to unpack .../63-liblerc4_4.0.0+ds-4ubuntu2_arm64.deb ...
+  [setup] Unpacking liblerc4:arm64 (4.0.0+ds-4ubuntu2) ...
+  [setup] Selecting previously unselected package libwebp7:arm64.
+  [setup] Preparing to unpack .../64-libwebp7_1.3.2-0.4build3_arm64.deb ...
+  [setup] Unpacking libwebp7:arm64 (1.3.2-0.4build3) ...
+  [setup] Selecting previously unselected package libtiff6:arm64.
+  [setup] Preparing to unpack .../65-libtiff6_4.5.1+git230720-4ubuntu2.5_arm64.deb ...
+  [setup] Unpacking libtiff6:arm64 (4.5.1+git230720-4ubuntu2.5) ...
+  [setup] Selecting previously unselected package libxpm4:arm64.
+  [setup] Preparing to unpack .../66-libxpm4_1%3a3.5.17-1build2_arm64.deb ...
+  [setup] Unpacking libxpm4:arm64 (1:3.5.17-1build2) ...
+  [setup] Selecting previously unselected package libgd3:arm64.
+  [setup] Preparing to unpack .../67-libgd3_2.3.3-9ubuntu5_arm64.deb ...
+  [setup] Unpacking libgd3:arm64 (2.3.3-9ubuntu5) ...
+  [setup] Selecting previously unselected package libc-devtools.
+  [setup] Preparing to unpack .../68-libc-devtools_2.39-0ubuntu8.7_arm64.deb ...
+  [setup] Unpacking libc-devtools (2.39-0ubuntu8.7) ...
+  [setup] Selecting previously unselected package libexpat1-dev:arm64.
+  [setup] Preparing to unpack .../69-libexpat1-dev_2.6.1-2ubuntu0.4_arm64.deb ...
+  [setup] Unpacking libexpat1-dev:arm64 (2.6.1-2ubuntu0.4) ...
+  [setup] Selecting previously unselected package libfile-fcntllock-perl.
+  [setup] Preparing to unpack .../70-libfile-fcntllock-perl_0.22-4ubuntu5_arm64.deb ...
+  [setup] Unpacking libfile-fcntllock-perl (0.22-4ubuntu5) ...
+  [setup] Selecting previously unselected package libheif-plugin-aomenc:arm64.
+  [setup] Preparing to unpack .../71-libheif-plugin-aomenc_1.17.6-1ubuntu4.6_arm64.deb ...
+  [setup] Unpacking libheif-plugin-aomenc:arm64 (1.17.6-1ubuntu4.6) ...
+  [setup] Selecting previously unselected package libjs-jquery.
+  [setup] Preparing to unpack .../72-libjs-jquery_3.6.1+dfsg+~3.5.14-1_all.deb ...
+  [setup] Unpacking libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+  [setup] Selecting previously unselected package libjs-underscore.
+  [setup] Preparing to unpack .../73-libjs-underscore_1.13.4~dfsg+~1.11.4-3_all.deb ...
+  [setup] Unpacking libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...
+  [setup] Selecting previously unselected package libjs-sphinxdoc.
+  [setup] Preparing to unpack .../74-libjs-sphinxdoc_7.2.6-6_all.deb ...
+  [setup] Unpacking libjs-sphinxdoc (7.2.6-6) ...
+  [setup] Selecting previously unselected package libpkgconf3:arm64.
+  [setup] Preparing to unpack .../75-libpkgconf3_1.8.1-2build1_arm64.deb ...
+  [setup] Unpacking libpkgconf3:arm64 (1.8.1-2build1) ...
+  [setup] Selecting previously unselected package zlib1g-dev:arm64.
+  [setup] Preparing to unpack .../76-zlib1g-dev_1%3a1.3.dfsg-3.1ubuntu2.1_arm64.deb ...
+  [setup] Unpacking zlib1g-dev:arm64 (1:1.3.dfsg-3.1ubuntu2.1) ...
+  [setup] Selecting previously unselected package libpython3.12-dev:arm64.
+  [setup] Preparing to unpack .../77-libpython3.12-dev_3.12.3-1ubuntu0.15_arm64.deb ...
+  [setup] Unpacking libpython3.12-dev:arm64 (3.12.3-1ubuntu0.15) ...
+  [setup] Selecting previously unselected package libpython3-dev:arm64.
+  [setup] Preparing to unpack .../78-libpython3-dev_3.12.3-0ubuntu2.1_arm64.deb ...
+  [setup] Unpacking libpython3-dev:arm64 (3.12.3-0ubuntu2.1) ...
+  [setup] Selecting previously unselected package libssl-dev:arm64.
+  [setup] Preparing to unpack .../79-libssl-dev_3.0.13-0ubuntu3.11_arm64.deb ...
+  [setup] Unpacking libssl-dev:arm64 (3.0.13-0ubuntu3.11) ...
+  [setup] Preparing to unpack .../80-linux-tools-common_6.8.0-136.136_all.deb ...
+  [setup] Unpacking linux-tools-common (6.8.0-136.136) over (6.8.0-134.134) ...
+  [setup] Selecting previously unselected package manpages-dev.
+  [setup] Preparing to unpack .../81-manpages-dev_6.7-2_all.deb ...
+  [setup] Unpacking manpages-dev (6.7-2) ...
+  [setup] Selecting previously unselected package pkgconf-bin.
+  [setup] Preparing to unpack .../82-pkgconf-bin_1.8.1-2build1_arm64.deb ...
+  [setup] Unpacking pkgconf-bin (1.8.1-2build1) ...
+  [setup] Selecting previously unselected package pkgconf:arm64.
+  [setup] Preparing to unpack .../83-pkgconf_1.8.1-2build1_arm64.deb ...
+  [setup] Unpacking pkgconf:arm64 (1.8.1-2build1) ...
+  [setup] Selecting previously unselected package pkg-config:arm64.
+  [setup] Preparing to unpack .../84-pkg-config_1.8.1-2build1_arm64.deb ...
+  [setup] Unpacking pkg-config:arm64 (1.8.1-2build1) ...
+  [setup] Selecting previously unselected package python3.12-dev.
+  [setup] Preparing to unpack .../85-python3.12-dev_3.12.3-1ubuntu0.15_arm64.deb ...
+  [setup] Unpacking python3.12-dev (3.12.3-1ubuntu0.15) ...
+  [setup] Selecting previously unselected package python3-dev.
+  [setup] Preparing to unpack .../86-python3-dev_3.12.3-0ubuntu2.1_arm64.deb ...
+  [setup] Unpacking python3-dev (3.12.3-0ubuntu2.1) ...
+  [setup] Selecting previously unselected package python3-wheel.
+  [setup] Preparing to unpack .../87-python3-wheel_0.42.0-2_all.deb ...
+  [setup] Unpacking python3-wheel (0.42.0-2) ...
+  [setup] Selecting previously unselected package python3-pip.
+  [setup] Preparing to unpack .../88-python3-pip_24.0+dfsg-1ubuntu1.3_all.deb ...
+  [setup] Unpacking python3-pip (24.0+dfsg-1ubuntu1.3) ...
+  [setup] Selecting previously unselected package python3-pip-whl.
+  [setup] Preparing to unpack .../89-python3-pip-whl_24.0+dfsg-1ubuntu1.3_all.deb ...
+  [setup] Unpacking python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+  [setup] Selecting previously unselected package python3-setuptools-whl.
+  [setup] Preparing to unpack .../90-python3-setuptools-whl_68.1.2-2ubuntu1.2_all.deb ...
+  [setup] Unpacking python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+  [setup] Selecting previously unselected package python3.12-venv.
+  [setup] Preparing to unpack .../91-python3.12-venv_3.12.3-1ubuntu0.15_arm64.deb ...
+  [setup] Unpacking python3.12-venv (3.12.3-1ubuntu0.15) ...
+  [setup] Selecting previously unselected package python3-venv.
+  [setup] Preparing to unpack .../92-python3-venv_3.12.3-0ubuntu2.1_arm64.deb ...
+  [setup] Unpacking python3-venv (3.12.3-0ubuntu2.1) ...
+  [setup] Setting up javascript-common (11+nmu1) ...
+  [setup] Setting up libsharpyuv0:arm64 (1.3.2-0.4build3) ...
+  [setup] Setting up libaom3:arm64 (3.8.2-2ubuntu0.1) ...
+  [setup] Setting up manpages-dev (6.7-2) ...
+  [setup] Setting up python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+  [setup] Setting up lto-disabled-list (47) ...
+  [setup] Setting up liblerc4:arm64 (4.0.0+ds-4ubuntu2) ...
+  [setup] Setting up libxpm4:arm64 (1:3.5.17-1build2) ...
+  [setup] Setting up libfile-fcntllock-perl (0.22-4ubuntu5) ...
+  [setup] Setting up python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+  [setup] Setting up libalgorithm-diff-perl (1.201-1) ...
+  [setup] Setting up binutils-common:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Setting up libdeflate0:arm64 (1.19-1build1.1) ...
+  [setup] Setting up linux-libc-dev:arm64 (6.8.0-136.136) ...
+  [setup] Setting up libctf-nobfd0:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Setting up libgomp1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up bzip2 (1.0.8-5.1build0.1) ...
+  [setup] Setting up python3-wheel (0.42.0-2) ...
+  [setup] Setting up libjbig0:arm64 (2.1-6.1ubuntu2) ...
+  [setup] Setting up libsframe1:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Setting up libfakeroot:arm64 (1.33-1) ...
+  [setup] Setting up fakeroot (1.33-1) ...
+  [setup] update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+  [setup] Setting up libpkgconf3:arm64 (1.8.1-2build1) ...
+  [setup] Setting up rpcsvc-proto (1.4.2-0ubuntu7) ...
+  [setup] Setting up gcc-13-base:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up make (4.3-4.1build2) ...
+  [setup] Setting up fonts-dejavu-mono (2.37-8) ...
+  [setup] Setting up libssl-dev:arm64 (3.0.13-0ubuntu3.11) ...
+  [setup] Setting up libmpc3:arm64 (1.3.1-1build1.1) ...
+  [setup] Setting up libatomic1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up fonts-dejavu-core (2.37-8) ...
+  [setup] Setting up pkgconf-bin (1.8.1-2build1) ...
+  [setup] Setting up python3-pip (24.0+dfsg-1ubuntu1.3) ...
+  [setup] Setting up libjpeg-turbo8:arm64 (2.1.5-2ubuntu2) ...
+  [setup] Setting up libdpkg-perl (1.22.6ubuntu6.6) ...
+  [setup] Setting up libwebp7:arm64 (1.3.2-0.4build3) ...
+  [setup] Setting up libubsan1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up libhwasan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up libcrypt-dev:arm64 (1:4.4.36-4build1) ...
+  [setup] Setting up libasan8:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up libtsan2:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+  [setup] Setting up libbinutils:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Setting up libisl23:arm64 (0.26-3build1.1) ...
+  [setup] Setting up libc-dev-bin (2.39-0ubuntu8.7) ...
+  [setup] Setting up linux-tools-common (6.8.0-136.136) ...
+  [setup] Setting up libalgorithm-diff-xs-perl:arm64 (0.04-8build3) ...
+  [setup] Setting up libcc1-0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up liblsan0:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up libitm1:arm64 (14.2.0-4ubuntu2~24.04.1) ...
+  [setup] Setting up libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...
+  [setup] Setting up libalgorithm-merge-perl (0.08-5) ...
+  [setup] Setting up libctf0:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Setting up libjpeg8:arm64 (8c-2ubuntu11) ...
+  [setup] Setting up cpp-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up python3.12-venv (3.12.3-1ubuntu0.15) ...
+  [setup] Setting up fontconfig-config (2.15.0-1.1ubuntu2) ...
+  [setup] Setting up pkgconf:arm64 (1.8.1-2build1) ...
+  [setup] Setting up cpp-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+  [setup] Setting up libgprofng0:arm64 (2.42-4ubuntu2.10) ...
+  [setup] Setting up python3-venv (3.12.3-0ubuntu2.1) ...
+  [setup] Setting up pkg-config:arm64 (1.8.1-2build1) ...
+  [setup] Setting up libjs-sphinxdoc (7.2.6-6) ...
+  [setup] Setting up libgcc-13-dev:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up libtiff6:arm64 (4.5.1+git230720-4ubuntu2.5) ...
+  [setup] Setting up libc6-dev:arm64 (2.39-0ubuntu8.7) ...
+  [setup] Setting up libstdc++-13-dev:arm64 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up cpp-13 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up binutils-aarch64-linux-gnu (2.42-4ubuntu2.10) ...
+  [setup] Setting up binutils (2.42-4ubuntu2.10) ...
+  [setup] Setting up gcc-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up dpkg-dev (1.22.6ubuntu6.6) ...
+  [setup] Setting up libexpat1-dev:arm64 (2.6.1-2ubuntu0.4) ...
+  [setup] Setting up gcc-13 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up zlib1g-dev:arm64 (1:1.3.dfsg-3.1ubuntu2.1) ...
+  [setup] Setting up cpp (4:13.2.0-7ubuntu1) ...
+  [setup] Setting up g++-13-aarch64-linux-gnu (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up gcc-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+  [setup] Setting up g++-13 (13.3.0-6ubuntu2~24.04.1) ...
+  [setup] Setting up libpython3.12-dev:arm64 (3.12.3-1ubuntu0.15) ...
+  [setup] Setting up gcc (4:13.2.0-7ubuntu1) ...
+  [setup] Setting up python3.12-dev (3.12.3-1ubuntu0.15) ...
+  [setup] Setting up g++-aarch64-linux-gnu (4:13.2.0-7ubuntu1) ...
+  [setup] Setting up libpython3-dev:arm64 (3.12.3-0ubuntu2.1) ...
+  [setup] Setting up python3-dev (3.12.3-0ubuntu2.1) ...
+  [setup] Setting up g++ (4:13.2.0-7ubuntu1) ...
+  [setup] update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+  [setup] Setting up build-essential (12.10ubuntu1) ...
+  [setup] Setting up libheif-plugin-aomdec:arm64 (1.17.6-1ubuntu4.6) ...
+  [setup] Setting up libheif1:arm64 (1.17.6-1ubuntu4.6) ...
+  [setup] Setting up libheif-plugin-aomenc:arm64 (1.17.6-1ubuntu4.6) ...
+  [setup] Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+  [setup] Processing triggers for man-db (2.12.0-4build2) ...
+  [setup] Processing triggers for sgml-base (1.31) ...
+  [setup] Setting up libfontconfig1:arm64 (2.15.0-1.1ubuntu2) ...
+  [setup] Setting up libgd3:arm64 (2.3.3-9ubuntu5) ...
+  [setup] Setting up libc-devtools (2.39-0ubuntu8.7) ...
+  [setup] Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+  [setup] debconf: unable to initialize frontend: Dialog
+  [setup] debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+  [setup] debconf: falling back to frontend: Readline
+  [setup] debconf: unable to initialize frontend: Readline
+  [setup] debconf: (This frontend requires a controlling tty.)
+  [setup] debconf: falling back to frontend: Teletype
+  [setup] 
+  [setup] Running kernel seems to be up-to-date.
+  [setup] 
+  [setup] No services need to be restarted.
+  [setup] 
+  [setup] No containers need to be restarted.
+  [setup] 
+  [setup] No user sessions are running outdated binaries.
+  [setup] 
+  [setup] No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[19:07:09] rsync repo up (excluding target/.git/results/node_modules)
+Warning: Permanently added '54.198.153.232' (ED25519) to the list of known hosts.
+[19:07:50] running calibration on the box (build + 2 variants; takes a while)…
+  [calib] Warning: Permanently added '54.198.153.232' (ED25519) to the list of known hosts.
+  [calib] [02:07:56] installing rust
+  [calib] [02:08:06] building mock-upstream + load-probe
+  [calib]     Updating crates.io index
+  [calib]  Downloading crates ...
+  [calib]   Downloaded atomic-waker v1.1.2
+  [calib]   Downloaded bitflags v2.13.1
+  [calib]   Downloaded tower-service v0.3.3
+  [calib]   Downloaded axum-core v0.5.6
+  [calib]   Downloaded base64 v0.22.1
+  [calib]   Downloaded bytes v1.12.1
+  [calib]   Downloaded cc v1.3.0
+  [calib]   Downloaded zerofrom-derive v0.1.7
+  [calib]   Downloaded axum v0.8.9
+  [calib]   Downloaded want v0.3.1
+  [calib]   Downloaded yoke v0.8.3
+  [calib]   Downloaded yoke-derive v0.8.2
+  [calib]   Downloaded stable_deref_trait v1.2.1
+  [calib]   Downloaded zeroize v1.9.0
+  [calib]   Downloaded serde_path_to_error v0.1.20
+  [calib]   Downloaded serde_urlencoded v0.7.1
+  [calib]   Downloaded untrusted v0.9.0
+  [calib]   Downloaded icu_locale_core v2.2.0
+  [calib]   Downloaded itoa v1.0.18
+  [calib]   Downloaded quinn v0.11.11
+  [calib]   Downloaded ring v0.17.14
+  [calib]   Downloaded rustc-hash v2.1.3
+  [calib]   Downloaded tinyvec_macros v0.1.1
+  [calib]   Downloaded tower v0.5.3
+  [calib]   Downloaded try-lock v0.2.5
+  [calib]   Downloaded zerofrom v0.1.8
+  [calib]   Downloaded zerovec-derive v0.11.3
+  [calib]   Downloaded futures-task v0.3.33
+  [calib]   Downloaded synstructure v0.13.2
+  [calib]   Downloaded writeable v0.6.3
+  [calib]   Downloaded zerotrie v0.2.4
+  [calib]   Downloaded smallvec v1.15.2
+  [calib]   Downloaded serde_json v1.0.150
+  [calib]   Downloaded subtle v2.6.1
+  [calib]   Downloaded syn v2.0.119
+  [calib]   Downloaded tower-http v0.6.11
+  [calib]   Downloaded tower-layer v0.3.3
+  [calib]   Downloaded cfg_aliases v0.2.2
+  [calib]   Downloaded form_urlencoded v1.2.2
+  [calib]   Downloaded http v1.4.2
+  [calib]   Downloaded httpdate v1.0.3
+  [calib]   Downloaded icu_normalizer v2.2.0
+  [calib]   Downloaded litemap v0.8.2
+  [calib]   Downloaded mime v0.3.17
+  [calib]   Downloaded pin-project-lite v0.2.17
+  [calib]   Downloaded quote v1.0.47
+  [calib]   Downloaded sync_wrapper v1.0.2
+  [calib]   Downloaded thiserror-impl v2.0.19
+  [calib]   Downloaded displaydoc v0.2.6
+  [calib]   Downloaded http-body v1.1.0
+  [calib]   Downloaded lru-slab v0.1.2
+  [calib]   Downloaded potential_utf v0.1.5
+  [calib]   Downloaded zmij v1.0.23
+  [calib]   Downloaded icu_properties v2.2.0
+  [calib]   Downloaded shlex v2.0.1
+  [calib]   Downloaded tinystr v0.8.3
+  [calib]   Downloaded tokio-rustls v0.26.4
+  [calib]   Downloaded utf8_iter v1.0.4
+  [calib]   Downloaded futures-core v0.3.33
+  [calib]   Downloaded idna_adapter v1.2.2
+  [calib]   Downloaded tokio-macros v2.7.1
+  [calib]   Downloaded cfg-if v1.0.4
+  [calib]   Downloaded zerovec v0.11.6
+  [calib]   Downloaded thiserror v2.0.19
+  [calib]   Downloaded idna v1.1.0
+  [calib]   Downloaded ipnet v2.12.0
+  [calib]   Downloaded percent-encoding v2.3.2
+  [calib]   Downloaded rand_pcg v0.10.2
+  [calib]   Downloaded find-msvc-tools v0.1.9
+  [calib]   Downloaded http-body-util v0.1.4
+  [calib]   Downloaded matchit v0.8.4
+  [calib]   Downloaded slab v0.4.12
+  [calib]   Downloaded tokio-stream v0.1.18
+  [calib]   Downloaded tinyvec v1.12.0
+  [calib]   Downloaded getrandom v0.4.3
+  [calib]   Downloaded hyper-rustls v0.27.9
+  [calib]   Downloaded once_cell v1.21.4
+  [calib]   Downloaded proc-macro2 v1.0.107
+  [calib]   Downloaded quinn-udp v0.5.15
+  [calib]   Downloaded rand_core v0.10.1
+  [calib]   Downloaded rustls-pki-types v1.15.0
+  [calib]   Downloaded serde v1.0.229
+  [calib]   Downloaded socket2 v0.6.5
+  [calib]   Downloaded chacha20 v0.10.1
+  [calib]   Downloaded futures-channel v0.3.33
+  [calib]   Downloaded getrandom v0.2.17
+  [calib]   Downloaded icu_provider v2.2.0
+  [calib]   Downloaded log v0.4.33
+  [calib]   Downloaded ryu v1.0.23
+  [calib]   Downloaded tracing-core v0.1.36
+  [calib]   Downloaded unicode-ident v1.0.24
+  [calib]   Downloaded url v2.5.8
+  [calib]   Downloaded httparse v1.10.1
+  [calib]   Downloaded icu_normalizer_data v2.2.0
+  [calib]   Downloaded memchr v2.8.3
+  [calib]   Downloaded rand v0.10.2
+  [calib]   Downloaded rustls-webpki v0.103.13
+  [calib]   Downloaded serde_core v1.0.229
+  [calib]   Downloaded webpki-roots v1.0.9
+  [calib]   Downloaded futures-util v0.3.33
+  [calib]   Downloaded hyper-util v0.1.20
+  [calib]   Downloaded icu_collections v2.2.0
+  [calib]   Downloaded mio v1.2.2
+  [calib]   Downloaded hyper v1.10.1
+  [calib]   Downloaded icu_properties_data v2.2.0
+  [calib]   Downloaded reqwest v0.12.28
+  [calib]   Downloaded quinn-proto v0.11.16
+  [calib]   Downloaded syn v3.0.0
+  [calib]   Downloaded rustls v0.23.42
+  [calib]   Downloaded tracing v0.1.44
+  [calib]   Downloaded libc v0.2.186
+  [calib]   Downloaded tokio v1.53.0
+  [calib]    Compiling proc-macro2 v1.0.107
+  [calib]    Compiling quote v1.0.47
+  [calib]    Compiling unicode-ident v1.0.24
+  [calib]    Compiling libc v0.2.186
+  [calib]    Compiling bytes v1.12.1
+  [calib]    Compiling pin-project-lite v0.2.17
+  [calib]    Compiling stable_deref_trait v1.2.1
+  [calib]    Compiling itoa v1.0.18
+  [calib]    Compiling futures-core v0.3.33
+  [calib]    Compiling once_cell v1.21.4
+  [calib]    Compiling syn v2.0.119
+  [calib]    Compiling smallvec v1.15.2
+  [calib]    Compiling http v1.4.2
+  [calib]    Compiling mio v1.2.2
+  [calib]    Compiling socket2 v0.6.5
+  [calib]    Compiling shlex v2.0.1
+  [calib]    Compiling find-msvc-tools v0.1.9
+  [calib]    Compiling cc v1.3.0
+  [calib]    Compiling http-body v1.1.0
+  [calib]    Compiling tracing-core v0.1.36
+  [calib]    Compiling percent-encoding v2.3.2
+  [calib]    Compiling serde_core v1.0.229
+  [calib]    Compiling litemap v0.8.2
+  [calib]    Compiling log v0.4.33
+  [calib]    Compiling writeable v0.6.3
+  [calib]    Compiling ring v0.17.14
+  [calib]    Compiling tracing v0.1.44
+  [calib]    Compiling tower-service v0.3.3
+  [calib]    Compiling futures-task v0.3.33
+  [calib]    Compiling slab v0.4.12
+  [calib]    Compiling synstructure v0.13.2
+  [calib]    Compiling icu_properties_data v2.2.0
+  [calib]    Compiling httparse v1.10.1
+  [calib]    Compiling utf8_iter v1.0.4
+  [calib]    Compiling icu_normalizer_data v2.2.0
+  [calib]    Compiling futures-util v0.3.33
+  [calib]    Compiling zerofrom-derive v0.1.7
+  [calib]    Compiling yoke-derive v0.8.2
+  [calib]    Compiling zerovec-derive v0.11.3
+  [calib]    Compiling zerofrom v0.1.8
+  [calib]    Compiling displaydoc v0.2.6
+  [calib]    Compiling yoke v0.8.3
+  [calib]    Compiling tokio-macros v2.7.1
+  [calib]    Compiling zerovec v0.11.6
+  [calib]    Compiling zerotrie v0.2.4
+  [calib]    Compiling tokio v1.53.0
+  [calib]    Compiling try-lock v0.2.5
+  [calib]    Compiling zeroize v1.9.0
+  [calib]    Compiling tinystr v0.8.3
+  [calib]    Compiling potential_utf v0.1.5
+  [calib]    Compiling icu_collections v2.2.0
+  [calib]    Compiling icu_locale_core v2.2.0
+  [calib]    Compiling cfg-if v1.0.4
+  [calib]    Compiling getrandom v0.2.17
+  [calib]    Compiling rustls-pki-types v1.15.0
+  [calib]    Compiling icu_provider v2.2.0
+  [calib]    Compiling want v0.3.1
+  [calib]    Compiling form_urlencoded v1.2.2
+  [calib]    Compiling sync_wrapper v1.0.2
+  [calib]    Compiling futures-channel v0.3.33
+  [calib]    Compiling serde v1.0.229
+  [calib]    Compiling tower-layer v0.3.3
+  [calib]    Compiling atomic-waker v1.1.2
+  [calib]    Compiling zmij v1.0.23
+  [calib]    Compiling httpdate v1.0.3
+  [calib]    Compiling untrusted v0.9.0
+  [calib]    Compiling icu_properties v2.2.0
+  [calib]    Compiling icu_normalizer v2.2.0
+  [calib]    Compiling hyper v1.10.1
+  [calib]    Compiling base64 v0.22.1
+  [calib]    Compiling rustls v0.23.42
+  [calib]    Compiling ipnet v2.12.0
+  [calib]    Compiling serde_json v1.0.150
+  [calib]    Compiling hyper-util v0.1.20
+  [calib]    Compiling rustls-webpki v0.103.13
+  [calib]    Compiling idna_adapter v1.2.2
+  [calib]    Compiling tower v0.5.3
+  [calib]    Compiling http-body-util v0.1.4
+  [calib]    Compiling memchr v2.8.3
+  [calib]    Compiling ryu v1.0.23
+  [calib]    Compiling subtle v2.6.1
+  [calib]    Compiling serde_urlencoded v0.7.1
+  [calib]    Compiling idna v1.1.0
+  [calib]    Compiling url v2.5.8
+  [calib]    Compiling webpki-roots v1.0.9
+  [calib]    Compiling mime v0.3.17
+  [calib]    Compiling bitflags v2.13.1
+  [calib]    Compiling tower-http v0.6.11
+  [calib]    Compiling axum-core v0.5.6
+  [calib]    Compiling serde_path_to_error v0.1.20
+  [calib]    Compiling tokio-rustls v0.26.4
+  [calib]    Compiling matchit v0.8.4
+  [calib]    Compiling hyper-rustls v0.27.9
+  [calib]    Compiling reqwest v0.12.28
+  [calib]    Compiling tokio-stream v0.1.18
+  [calib]    Compiling axum v0.8.9
+  [calib]    Compiling mock-upstream v0.1.0 (/home/ubuntu/ai-gateway-bench/crates/mock-upstream)
+  [calib]    Compiling load-probe v0.1.0 (/home/ubuntu/ai-gateway-bench/crates/load-probe)
+  [calib] [02:08:41] cloning litellm-rust (litellm_rust_gateway_v1_messages_route)
+  [calib]     Finished `release` profile [optimized] target(s) in 34.99s
+  [calib] Cloning into '/home/ubuntu/litellm-rust-src'...
+  [calib] [02:08:44] building litellm-ai-gateway (server,python-config)
+  [calib]     Updating crates.io index
+  [calib]  Downloading crates ...
+  [calib]   Downloaded async-trait v0.1.89
+  [calib]   Downloaded axum-core v0.4.5
+  [calib]   Downloaded axum v0.7.9
+  [calib]   Downloaded byteorder v1.5.0
+  [calib]   Downloaded data-encoding v2.11.0
+  [calib]   Downloaded fnv v1.0.7
+  [calib]   Downloaded futures-io v0.3.32
+  [calib]   Downloaded cfg_aliases v0.2.1
+  [calib]   Downloaded futures-task v0.3.32
+  [calib]   Downloaded getrandom v0.3.4
+  [calib]   Downloaded heck v0.5.0
+  [calib]   Downloaded indexmap v2.14.0
+  [calib]   Downloaded mio v1.2.1
+  [calib]   Downloaded pyo3-ffi v0.29.0
+  [calib]   Downloaded proc-macro2 v1.0.106
+  [calib]   Downloaded quinn-proto v0.11.15
+  [calib]   Downloaded rand v0.8.6
+  [calib]   Downloaded rustc-hash v2.1.2
+  [calib]   Downloaded rustls-pki-types v1.14.1
+  [calib]   Downloaded serde_core v1.0.228
+  [calib]   Downloaded sha2 v0.10.9
+  [calib]   Downloaded target-lexicon v0.13.5
+  [calib]   Downloaded rand_chacha v0.9.0
+  [calib]   Downloaded thiserror-impl v1.0.69
+  [calib]   Downloaded tokio v1.52.3
+  [calib]   Downloaded utf-8 v0.7.6
+  [calib]   Downloaded tokio-util v0.7.18
+  [calib]   Downloaded zerocopy v0.8.52
+  [calib]   Downloaded cpufeatures v0.2.17
+  [calib]   Downloaded equivalent v1.0.2
+  [calib]   Downloaded block-buffer v0.10.4
+  [calib]   Downloaded futures-macro v0.3.32
+  [calib]   Downloaded generic-array v0.14.7
+  [calib]   Downloaded http-body v1.0.1
+  [calib]   Downloaded memchr v2.8.2
+  [calib]   Downloaded pyo3 v0.29.0
+  [calib]   Downloaded pyo3-macros-backend v0.29.0
+  [calib]   Downloaded rand_core v0.9.5
+  [calib]   Downloaded rand v0.9.4
+  [calib]   Downloaded sha1 v0.10.6
+  [calib]   Downloaded rustversion v1.0.22
+  [calib]   Downloaded thiserror v1.0.69
+  [calib]   Downloaded tungstenite v0.24.0
+  [calib]   Downloaded tinyvec v1.11.0
+  [calib]   Downloaded webpki-roots v1.0.8
+  [calib]   Downloaded bytes v1.12.0
+  [calib]   Downloaded digest v0.10.7
+  [calib]   Downloaded hashbrown v0.17.1
+  [calib]   Downloaded openssl-probe v0.2.1
+  [calib]   Downloaded pyo3-macros v0.29.0
+  [calib]   Downloaded futures-sink v0.3.32
+  [calib]   Downloaded rand_chacha v0.3.1
+  [calib]   Downloaded rustls-native-certs v0.8.4
+  [calib]   Downloaded socket2 v0.6.4
+  [calib]   Downloaded typenum v1.20.1
+  [calib]   Downloaded thiserror-impl v2.0.18
+  [calib]   Downloaded futures-channel v0.3.32
+  [calib]   Downloaded h2 v0.4.15
+  [calib]   Downloaded ppv-lite86 v0.2.21
+  [calib]   Downloaded quote v1.0.46
+  [calib]   Downloaded bitflags v2.13.0
+  [calib]   Downloaded serde v1.0.228
+  [calib]   Downloaded version_check v0.9.5
+  [calib]   Downloaded thiserror v2.0.18
+  [calib]   Downloaded crypto-common v0.1.7
+  [calib]   Downloaded http-body-util v0.1.3
+  [calib]   Downloaded serde_derive v1.0.228
+  [calib]   Downloaded quinn-udp v0.5.14
+  [calib]   Downloaded tokio-tungstenite v0.24.0
+  [calib]   Downloaded futures-core v0.3.32
+  [calib]   Downloaded pyo3-build-config v0.29.0
+  [calib]   Downloaded syn v2.0.118
+  [calib]   Downloaded cc v1.2.65
+  [calib]   Downloaded rand_core v0.6.4
+  [calib]   Downloaded zmij v1.0.21
+  [calib]   Downloaded matchit v0.7.3
+  [calib]   Downloaded rustls v0.23.41
+  [calib]   Downloaded tokio-macros v2.7.0
+  [calib]   Downloaded futures-util v0.3.32
+  [calib]    Compiling proc-macro2 v1.0.106
+  [calib]    Compiling quote v1.0.46
+  [calib]    Compiling unicode-ident v1.0.24
+  [calib]    Compiling libc v0.2.186
+  [calib]    Compiling bytes v1.12.0
+  [calib]    Compiling itoa v1.0.18
+  [calib]    Compiling pin-project-lite v0.2.17
+  [calib]    Compiling once_cell v1.21.4
+  [calib]    Compiling cfg-if v1.0.4
+  [calib]    Compiling stable_deref_trait v1.2.1
+  [calib]    Compiling syn v2.0.118
+  [calib]    Compiling futures-core v0.3.32
+  [calib]    Compiling find-msvc-tools v0.1.9
+  [calib]    Compiling futures-sink v0.3.32
+  [calib]    Compiling shlex v2.0.1
+  [calib]    Compiling getrandom v0.2.17
+  [calib]    Compiling cc v1.2.65
+  [calib]    Compiling mio v1.2.1
+  [calib]    Compiling socket2 v0.6.4
+  [calib]    Compiling http v1.4.2
+  [calib]    Compiling log v0.4.33
+  [calib]    Compiling ring v0.17.14
+  [calib]    Compiling slab v0.4.12
+  [calib]    Compiling zeroize v1.9.0
+  [calib]    Compiling version_check v0.9.5
+  [calib]    Compiling memchr v2.8.2
+  [calib]    Compiling generic-array v0.14.7
+  [calib]    Compiling rustls-pki-types v1.14.1
+  [calib]    Compiling tracing-core v0.1.36
+  [calib]    Compiling synstructure v0.13.2
+  [calib]    Compiling smallvec v1.15.2
+  [calib]    Compiling tracing v0.1.44
+  [calib]    Compiling typenum v1.20.1
+  [calib]    Compiling untrusted v0.9.0
+  [calib]    Compiling zerocopy v0.8.52
+  [calib]    Compiling futures-io v0.3.32
+  [calib]    Compiling target-lexicon v0.13.5
+  [calib]    Compiling zerofrom-derive v0.1.7
+  [calib]    Compiling yoke-derive v0.8.2
+  [calib]    Compiling zerovec-derive v0.11.3
+  [calib]    Compiling tokio-macros v2.7.0
+  [calib]    Compiling zerofrom v0.1.8
+  [calib]    Compiling yoke v0.8.3
+  [calib]    Compiling displaydoc v0.2.6
+  [calib]    Compiling zerovec v0.11.6
+  [calib]    Compiling tokio v1.52.3
+  [calib]    Compiling tinystr v0.8.3
+  [calib]    Compiling litemap v0.8.2
+  [calib]    Compiling httparse v1.10.1
+  [calib]    Compiling serde_core v1.0.228
+  [calib]    Compiling writeable v0.6.3
+  [calib]    Compiling futures-task v0.3.32
+  [calib]    Compiling icu_locale_core v2.2.0
+  [calib]    Compiling futures-util v0.3.32
+  [calib]    Compiling zerotrie v0.2.4
+  [calib]    Compiling potential_utf v0.1.5
+  [calib]    Compiling http-body v1.0.1
+  [calib]    Compiling percent-encoding v2.3.2
+  [calib]    Compiling rustls v0.23.41
+  [calib]    Compiling icu_properties_data v2.2.0
+  [calib]    Compiling utf8_iter v1.0.4
+  [calib]    Compiling icu_normalizer_data v2.2.0
+  [calib]    Compiling icu_collections v2.2.0
+  [calib]    Compiling icu_provider v2.2.0
+  [calib]    Compiling rustls-webpki v0.103.13
+  [calib]    Compiling equivalent v1.0.2
+  [calib]    Compiling hashbrown v0.17.1
+  [calib]    Compiling subtle v2.6.1
+  [calib]    Compiling tower-service v0.3.3
+  [calib]    Compiling indexmap v2.14.0
+  [calib]    Compiling ppv-lite86 v0.2.21
+  [calib]    Compiling pyo3-build-config v0.29.0
+  [calib]    Compiling block-buffer v0.10.4
+  [calib]    Compiling crypto-common v0.1.7
+  [calib]    Compiling tokio-util v0.7.18
+  [calib]    Compiling rand_core v0.6.4
+  [calib]    Compiling try-lock v0.2.5
+  [calib]    Compiling atomic-waker v1.1.2
+  [calib]    Compiling zmij v1.0.21
+  [calib]    Compiling serde v1.0.228
+  [calib]    Compiling fnv v1.0.7
+  [calib]    Compiling h2 v0.4.15
+  [calib]    Compiling want v0.3.1
+  [calib]    Compiling rand_chacha v0.3.1
+  [calib]    Compiling digest v0.10.7
+  [calib]    Compiling icu_properties v2.2.0
+  [calib]    Compiling icu_normalizer v2.2.0
+  [calib]    Compiling form_urlencoded v1.2.2
+  [calib]    Compiling serde_derive v1.0.228
+  [calib]    Compiling cpufeatures v0.2.17
+  [calib]    Compiling futures-channel v0.3.32
+  [calib]    Compiling sync_wrapper v1.0.2
+  [calib]    Compiling tower-layer v0.3.3
+  [calib]    Compiling httpdate v1.0.3
+  [calib]    Compiling thiserror v1.0.69
+  [calib]    Compiling serde_json v1.0.150
+  [calib]    Compiling hyper v1.10.1
+  [calib]    Compiling idna_adapter v1.2.2
+  [calib]    Compiling tokio-rustls v0.26.4
+  [calib]    Compiling rand v0.8.6
+  [calib]    Compiling pyo3-ffi v0.29.0
+  [calib]    Compiling thiserror-impl v1.0.69
+  [calib]    Compiling ipnet v2.12.0
+  [calib]    Compiling base64 v0.22.1
+  [calib]    Compiling rustversion v1.0.22
+  [calib]    Compiling hyper-util v0.1.20
+  [calib]    Compiling idna v1.1.0
+  [calib]    Compiling tower v0.5.3
+  [calib]    Compiling sha1 v0.10.6
+  [calib]    Compiling http-body-util v0.1.3
+  [calib]    Compiling heck v0.5.0
+  [calib]    Compiling thiserror v2.0.18
+  [calib]    Compiling ryu v1.0.23
+  [calib]    Compiling byteorder v1.5.0
+  [calib]    Compiling utf-8 v0.7.6
+  [calib]    Compiling openssl-probe v0.2.1
+  [calib]    Compiling data-encoding v2.11.0
+  [calib]    Compiling serde_urlencoded v0.7.1
+  [calib]    Compiling rustls-native-certs v0.8.4
+  [calib]    Compiling pyo3-macros-backend v0.29.0
+  [calib]    Compiling tungstenite v0.24.0
+  [calib]    Compiling url v2.5.8
+  [calib]    Compiling pyo3 v0.29.0
+  [calib]    Compiling thiserror-impl v2.0.18
+  [calib]    Compiling async-trait v0.1.89
+  [calib]    Compiling webpki-roots v1.0.8
+  [calib]    Compiling bitflags v2.13.0
+  [calib]    Compiling mime v0.3.17
+  [calib]    Compiling tower-http v0.6.11
+  [calib]    Compiling axum-core v0.4.5
+  [calib]    Compiling hyper-rustls v0.27.9
+  [calib]    Compiling pyo3-macros v0.29.0
+  [calib]    Compiling tokio-tungstenite v0.24.0
+  [calib]    Compiling serde_path_to_error v0.1.20
+  [calib]    Compiling matchit v0.7.3
+  [calib]    Compiling reqwest v0.12.28
+  [calib]    Compiling litellm-core v0.1.0 (/home/ubuntu/litellm-rust-src/litellm-rust/crates/core)
+  [calib]    Compiling axum v0.7.9
+  [calib]    Compiling sha2 v0.10.9
+  [calib]    Compiling litellm-ai-gateway v0.1.0 (/home/ubuntu/litellm-rust-src/litellm-rust/crates/ai-gateway)
+  [calib]     Finished `release` profile [optimized] target(s) in 57.57s
+  [calib] [02:09:42] litellm-rust binary: /home/ubuntu/litellm-rust-src/litellm-rust/target/release/litellm-ai-gateway
+  [calib] [02:09:42] starting mock (:9000, TTFT 20ms)
+  [calib] [02:09:42] direct baseline: n=5000 c=1 against mock
+  [calib] [02:11:27]   direct p99 = 21.243541 ms
+  [calib] [02:11:27] ── variant [lean_env] ──
+  [calib] [02:12:08]   [lean_env] no /health — trying a raw request to see if it's up
+  [calib] [02:12:13]   [lean_env] IDLE rss (pre-traffic) = 8.511 MB
+  [calib] [02:12:13]   [lean_env] FIRST /v1/messages -> HTTP 400  (0.000365s)
+  [calib] [02:12:16]   [lean_env] RSS after first req = 8.516 MB
+  [calib] [02:12:17]   [lean_env] LOAD peak rss = ? MB   gateway p99 = 0.11009 ms   errors = 5000
+  [calib] [02:12:18] installing litellm[proxy] into venv (their README: config reader must import)
+  [calib] [02:12:44] ── variant [python_config] ──
+  [calib] [02:13:24]   [python_config] no /health — trying a raw request to see if it's up
+  [calib] [02:13:29]   [python_config] IDLE rss (pre-traffic) = 275.481 MB
+  [calib] [02:13:29]   [python_config] FIRST /v1/messages -> HTTP 200  (0.021930s)
+  [calib] [02:13:32]   [python_config] RSS after first req = 275.685 MB
+  [calib] [02:15:19]   [python_config] LOAD peak rss = ? MB   gateway p99 = 21.503919 ms   errors = 0
+  [calib] [02:15:20] ==========================================================
+  [calib] {
+  [calib]   "berriai_reported": {
+  [calib]     "p99_added_ms": 0.66,
+  [calib]     "peak_rss_mb": 21.8
+  [calib]   },
+  [calib]   "arch": "aarch64",
+  [calib]   "count": 5000,
+  [calib]   "concurrency": 1,
+  [calib]   "mock_ttft_ms": 20,
+  [calib]   "variants": [
+  [calib]     {
+  [calib]       "variant": "lean_env",
+  [calib]       "first_request_http_status": 400,
+  [calib]       "first_request_seconds": 0.000365,
+  [calib]       "served_mock": false,
+  [calib]       "idle_rss_mb": 8.511,
+  [calib]       "post_first_req_rss_mb": 8.516,
+  [calib]       "load_peak_rss_mb": null,
+  [calib]       "gateway_p99_ms": 0.11009,
+  [calib]       "direct_p99_ms": 21.243541,
+  [calib]       "p99_added_ms": -21.133,
+  [calib]       "errors": 5000
+  [calib]     },
+  [calib]     {
+  [calib]       "variant": "python_config",
+  [calib]       "first_request_http_status": 200,
+  [calib]       "first_request_seconds": 0.02193,
+  [calib]       "served_mock": true,
+  [calib]       "idle_rss_mb": 275.481,
+  [calib]       "post_first_req_rss_mb": 275.685,
+  [calib]       "load_peak_rss_mb": null,
+  [calib]       "gateway_p99_ms": 21.503919,
+  [calib]       "direct_p99_ms": 21.243541,
+  [calib]       "p99_added_ms": 0.26,
+  [calib]       "errors": 0
+  [calib]     }
+  [calib]   ]
+  [calib] }
+  [calib] [02:15:20] ==========================================================
+[19:15:20] pulling results/calibration back
+Warning: Permanently added '54.198.153.232' (ED25519) to the list of known hosts.
+[19:16:01] done — report at results/calibration/report.json
+[19:16:01] TERMINATING i-0952e3536a6bdb6a4

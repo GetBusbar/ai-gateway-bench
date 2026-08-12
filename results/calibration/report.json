@@ -1,0 +1,38 @@
+{
+  "berriai_reported": {
+    "p99_added_ms": 0.66,
+    "peak_rss_mb": 21.8
+  },
+  "arch": "aarch64",
+  "count": 5000,
+  "concurrency": 1,
+  "mock_ttft_ms": 20,
+  "variants": [
+    {
+      "variant": "lean_env",
+      "first_request_http_status": 400,
+      "first_request_seconds": 0.000365,
+      "served_mock": false,
+      "idle_rss_mb": 8.511,
+      "post_first_req_rss_mb": 8.516,
+      "load_peak_rss_mb": null,
+      "gateway_p99_ms": 0.11009,
+      "direct_p99_ms": 21.243541,
+      "p99_added_ms": -21.133,
+      "errors": 5000
+    },
+    {
+      "variant": "python_config",
+      "first_request_http_status": 200,
+      "first_request_seconds": 0.02193,
+      "served_mock": true,
+      "idle_rss_mb": 275.481,
+      "post_first_req_rss_mb": 275.685,
+      "load_peak_rss_mb": null,
+      "gateway_p99_ms": 21.503919,
+      "direct_p99_ms": 21.243541,
+      "p99_added_ms": 0.26,
+      "errors": 0
+    }
+  ]
+}

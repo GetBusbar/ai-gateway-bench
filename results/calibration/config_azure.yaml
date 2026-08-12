@@ -1,0 +1,6 @@
+model_list:
+  - model_name: azure_ai/mock
+    litellm_params:
+      model: azure_ai/mock
+      api_base: http://127.0.0.1:9000/v1/messages
+      api_key: dummy

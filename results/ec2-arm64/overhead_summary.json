@@ -1,0 +1,47 @@
+[
+  {
+    "gateway": "busbar",
+    "endpoint": "http://127.0.0.1:8105/bench-pool/v1/messages",
+    "baseline_endpoint": "http://127.0.0.1:9000/v1/messages",
+    "latency_p50_overhead_ms": 0.285,
+    "latency_p99_overhead_ms": 0.339,
+    "gateway_result": "busbar.json",
+    "baseline_result": "direct_anthropic.json"
+  },
+  {
+    "gateway": "litellm-rust",
+    "endpoint": "http://127.0.0.1:8101/v1/messages",
+    "baseline_endpoint": "http://127.0.0.1:9000/v1/messages",
+    "latency_p50_overhead_ms": 0.236,
+    "latency_p99_overhead_ms": 0.263,
+    "gateway_result": "litellm_rust.json",
+    "baseline_result": "direct_anthropic.json"
+  },
+  {
+    "gateway": "litellm-python",
+    "endpoint": "http://127.0.0.1:8102/v1/messages",
+    "baseline_endpoint": "http://127.0.0.1:9000/v1/messages",
+    "latency_p50_overhead_ms": 8.849,
+    "latency_p99_overhead_ms": 9.722,
+    "gateway_result": "litellm_python.json",
+    "baseline_result": "direct_anthropic.json"
+  },
+  {
+    "gateway": "bifrost",
+    "endpoint": "http://127.0.0.1:8103/anthropic/v1/messages",
+    "baseline_endpoint": "http://127.0.0.1:9000/v1/messages",
+    "latency_p50_overhead_ms": 0.638,
+    "latency_p99_overhead_ms": 0.74,
+    "gateway_result": "bifrost.json",
+    "baseline_result": "direct_anthropic.json"
+  },
+  {
+    "gateway": "portkey",
+    "endpoint": "http://127.0.0.1:8787/v1/messages",
+    "baseline_endpoint": "http://127.0.0.1:9000/v1/messages",
+    "latency_p50_overhead_ms": 3.824,
+    "latency_p99_overhead_ms": 6.033,
+    "gateway_result": "portkey_nonstream.json",
+    "baseline_result": "direct_anthropic.json"
+  }
+]

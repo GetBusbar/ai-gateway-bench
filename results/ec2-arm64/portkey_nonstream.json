@@ -1,0 +1,11 @@
+{
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 124.700440712,
+  "errors": [],
+  "label": "portkey",
+  "latency_p50_ms": 24.98829,
+  "latency_p99_ms": 27.332854,
+  "rps": 40.0960892475727,
+  "url": "http://127.0.0.1:8787/v1/messages"
+}

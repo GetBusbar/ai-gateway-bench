@@ -1,0 +1,11 @@
+{
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 109.015073533,
+  "errors": [],
+  "label": "bifrost",
+  "latency_p50_ms": 21.802307,
+  "latency_p99_ms": 22.039956,
+  "rps": 45.86521696457369,
+  "url": "http://127.0.0.1:8103/anthropic/v1/messages"
+}

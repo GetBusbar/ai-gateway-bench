@@ -1,0 +1,11 @@
+{
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 149.58329376,
+  "errors": [],
+  "label": "litellm-python",
+  "latency_p50_ms": 30.013008,
+  "latency_p99_ms": 31.022031,
+  "rps": 33.42619268714785,
+  "url": "http://127.0.0.1:8102/v1/messages"
+}

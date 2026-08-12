@@ -1,0 +1,2 @@
+realtime connection pool enabled: target 4 warm sockets/key, max idle 30s
+litellm-ai-gateway listening on 127.0.0.1:8101

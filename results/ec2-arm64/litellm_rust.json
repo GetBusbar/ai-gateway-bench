@@ -1,0 +1,11 @@
+{
+  "concurrency": 1,
+  "count": 5000,
+  "elapsed_s": 107.013315754,
+  "errors": [],
+  "label": "litellm-rust",
+  "latency_p50_ms": 21.400638999999998,
+  "latency_p99_ms": 21.562634,
+  "rps": 46.723157438592935,
+  "url": "http://127.0.0.1:8101/v1/messages"
+}
