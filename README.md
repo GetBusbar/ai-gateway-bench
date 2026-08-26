@@ -1,5 +1,8 @@
 # AIGatewayBench
 
+[![codecov](https://codecov.io/gh/GetBusbar/ai-gateway-bench/branch/main/graph/badge.svg)](https://codecov.io/gh/GetBusbar/ai-gateway-bench)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A reproducible benchmark for **AI-gateway overhead**: the latency, memory, and resource cost a gateway adds on top of the upstream LLM, measured through the lens of a coding agent.
 
 Every gateway points at the same local deterministic mock, so provider latency and network noise are removed and what's left is the gateway's own overhead:
